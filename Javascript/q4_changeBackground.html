@@ -1,0 +1,37 @@
+<!-- Write JS code to change the Background image of a body tag by clicking the button. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background</title>
+    <style>
+        #backgroundImg {
+            background-image: url(../../Pictures/1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgb(42, 68, 92);
+            height: 60vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="backgroundImg">This is the background image</div>
+    <button onclick="changeBackground()">Change Background</button>
+</body>
+<script>
+    const backImg = document.getElementById("backgroundImg");
+
+    function changeBackground() {
+        var currentImage = backImg.style.backgroundImage;
+        if (currentImage.includes("1.jpg")) {
+            backImg.style.backgroundImage = "url(../../Pictures/2.png)";
+        } else {
+            backImg.style.backgroundImage = "url(../../Pictures/1.jpg)";
+        }
+    }
+</script>
+
+</html>
